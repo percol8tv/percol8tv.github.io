@@ -1,27 +1,9 @@
 <!doctype html>
 <!--
-  PROPOSED, NOT PUBLISHED (26 Oct 2026). Percol8 TV phone-keyboard opener.
-
-  Why: a public https:// QR link may offer a browser action, but the owner's Nothing camera only
-  offers to copy the TV's plain http:// home-network link. If the owner approves, this page is
-  published as https://stephengilly92.github.io/gill-family-media-site/remote.html (the public
-  GitHub Pages repo that already hosts the privacy page), and PhonePairingQrPolicy.HOSTED_OPENER_URL
-  is set to that address. The TV's QR then reads
-      https://stephengilly92.github.io/gill-family-media-site/remote.html#192.168.x.y:8765
-  and this page forwards the phone to http://192.168.x.y:8765/ on the home network.
-
-  Privacy and safety:
-  - The TV address travels only in the URL fragment (#...), which browsers never send to GitHub.
-    The pairing code is never in this link: a phone that arrives here links with the TV's 6-digit
-    code (or is already linked by its cookie).
-  - Only a private IPv4 address (10/8, 172.16/12, 192.168/16) on port 8765 is accepted, so this page
-    can't be used to send anyone anywhere else. Nothing is loaded from elsewhere, nothing is stored,
-    no analytics, no names.
-  - Until published and switched on, the QR stays the raw home-network URL (owner decision 16 Oct 2026).
-
-  Unverified: whether Chrome lets a public https page navigate the phone to a home-network address
-  without a prompt (Chrome's Local Network Access rules list fetches and frames; top-level navigation
-  is not listed). The page therefore also shows a tappable link and the address to type.
+  Percol8 TV phone-keyboard opener, published at https://percol8tv.github.io/remote.html.
+  The fragment carries only a private IPv4 address and port 8765; browsers do not send it
+  to this host. Pairing uses the code displayed on the TV. No analytics or external assets.
+  The visible fallback link remains available if the browser does not follow automatically.
 -->
 <html lang="en-GB">
 <head>
